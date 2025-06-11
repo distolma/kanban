@@ -4,6 +4,7 @@
 
 - [x] Generate the app: `mix phx.new kanban --live --database sqlite3`
 - [x] Local HTTPS (mkcert)
+
   - Trust the local CA: `mkcert -install`
   - Generate certs inside the project:
 
@@ -14,6 +15,8 @@
       -cert-file priv/cert/localhost.pem \
       localhost 127.0.0.1 ::1
     ```
+
+- [x] Reproducible Dev Environment (`nix develop`)
 
 ## Stage 1 — Models & CRUD
 

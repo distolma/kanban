@@ -1,3 +1,7 @@
+# Nix-specific directories for Mix and Hex
+/.nix-mix/
+/.nix-hex/
+
 # The directory Mix will write compiled artifacts to.
 /_build/
 
