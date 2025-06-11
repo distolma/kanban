@@ -22,7 +22,7 @@
 
 - [x] Create `Board` schema
 - [x] Create `Column` schema
-- [ ] Create `Card` schema
+- [x] Create `Card` schema
 - [ ] Implement basic CRUD forms and routes
 
 ## Stage 2 — LiveView
