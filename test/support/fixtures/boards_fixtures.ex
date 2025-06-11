@@ -18,4 +18,19 @@ defmodule Kanban.BoardsFixtures do
 
     board
   end
+
+  @doc """
+  Generate a column.
+  """
+  def column_fixture(attrs \\ %{}) do
+    {:ok, column} =
+      attrs
+      |> Enum.into(%{
+        position: 42,
+        title: "some title"
+      })
+      |> Kanban.Boards.create_column()
+
+    column
+  end
 end

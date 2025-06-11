@@ -21,7 +21,7 @@
 ## Stage 1 — Models & CRUD
 
 - [x] Create `Board` schema
-- [ ] Create `Column` schema
+- [x] Create `Column` schema
 - [ ] Create `Card` schema
 - [ ] Implement basic CRUD forms and routes
 
