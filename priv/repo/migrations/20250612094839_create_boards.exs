@@ -3,13 +3,9 @@ defmodule Kanban.Repo.Migrations.CreateBoards do
 
   def change do
     create table(:boards) do
-      add :name, :string
-      add :description, :text
-      add :owner_id, references(:users, on_delete: :nothing)
+      add :title, :string
 
       timestamps(type: :utc_datetime)
     end
-
-    create index(:boards, [:owner_id])
   end
 end

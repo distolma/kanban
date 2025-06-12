@@ -3,9 +3,9 @@ defmodule Kanban.Boards.Board do
   import Ecto.Changeset
 
   schema "boards" do
-    field :name, :string
-    field :description, :string
-    field :owner_id, :id
+    field :title, :string
+
+    has_many :column, Kanban.Columns.Column
 
     timestamps(type: :utc_datetime)
   end
@@ -13,7 +13,7 @@ defmodule Kanban.Boards.Board do
   @doc false
   def changeset(board, attrs) do
     board
-    |> cast(attrs, [:name, :description])
-    |> validate_required([:name, :description])
+    |> cast(attrs, [:title])
+    |> validate_required([:title])
   end
 end

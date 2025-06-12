@@ -4,8 +4,8 @@ defmodule Kanban.Repo.Migrations.CreateColumns do
   def change do
     create table(:columns) do
       add :title, :string
-      add :position, :integer
-      add :board_id, references(:boards, on_delete: :nothing)
+      add :order, :integer
+      add :board_id, references(:boards, on_delete: :delete_all), null: false
 
       timestamps(type: :utc_datetime)
     end

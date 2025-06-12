@@ -11,43 +11,10 @@ defmodule Kanban.BoardsFixtures do
     {:ok, board} =
       attrs
       |> Enum.into(%{
-        description: "some description",
-        name: "some name"
+        title: "some title"
       })
       |> Kanban.Boards.create_board()
 
     board
-  end
-
-  @doc """
-  Generate a column.
-  """
-  def column_fixture(attrs \\ %{}) do
-    {:ok, column} =
-      attrs
-      |> Enum.into(%{
-        position: 42,
-        title: "some title"
-      })
-      |> Kanban.Boards.create_column()
-
-    column
-  end
-
-  @doc """
-  Generate a card.
-  """
-  def card_fixture(attrs \\ %{}) do
-    {:ok, card} =
-      attrs
-      |> Enum.into(%{
-        description: "some description",
-        due_date: ~U[2025-06-10 15:19:00Z],
-        position: 42,
-        title: "some title"
-      })
-      |> Kanban.Boards.create_card()
-
-    card
   end
 end
